@@ -1,0 +1,105 @@
+/* Box sizing rules */
+
+* {
+	box-sizing: border-box;
+}
+
+/* Settings */
+
+.full-screen-background {
+ 	height: 100vh;
+      width: 100vw;
+	max-width:100%;
+      background: url('assets/bg1.png') no-repeat ;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;  
+}
+
+.full-screen-background::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      /* transform: translate(-50%, 65%); */
+      /* transform: rotate(45deg); */
+      width: 70vw;
+      height: 70vw;
+      background: url('assets/frame1.webp') no-repeat center center;
+      background-size: contain;
+      z-index: -1;
+      animation-name: rotateAnimation;
+      animation-duration: 16s;
+      animation-iteration-count: infinite;
+	  
+}
+
+.header {
+	height: 200vh;
+}
+
+@media (max-width: 375px) {
+      .full-screen-background::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 65%) rotate(0deg);
+            /* transform: rotate(45deg); */
+            width: 100vw ;
+            height: 100vw ;
+            background: url('assets/frame1.webp') no-repeat center center;
+            background-size: contain;
+            z-index: -1;
+            animation-name: rotateAnimation;
+            animation-duration: 16s;
+            animation-iteration-count: infinite;
+      }
+      .logo {
+            display: block;
+            color: white;
+            font-family: 'Pixelify Sans';
+            font-style: normal;
+            font-size: 1.5rem;
+      }
+    }
+
+/* LOGO */    
+.logo {
+	display: block;
+      color: #CEB7FF;
+      font-family: 'Pixelify Sans';
+      font-style: normal;
+      font-size: 2.5rem;
+}
+
+@media (max-width: 375px) {
+      
+      .logo {
+            font-size: 2rem;
+      }
+    }
+
+.logo__main{
+      display: flex;
+      justify-content:flex-start;
+  }
+
+@keyframes rotateAnimation {
+      0% {
+            transform: translate(-50%, 65%) rotate(0deg);
+      }
+      25% {
+            transform: translate(-50%, 65%) rotate(90deg);
+      }
+      50% {
+            transform: translate(-50%, 65%) rotate(180deg);
+      }
+      75% {
+            transform: translate(-50%, 65%) rotate(270deg);
+      }
+      100% {
+            transform: translate(-50%, 65%) rotate(360deg);
+      }
+}
