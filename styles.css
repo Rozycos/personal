@@ -6,6 +6,11 @@
 
 /* Settings */
 
+.container{
+      margin: 0 auto;
+      width: 90vw;
+}
+
 .full-screen-background {
  	height: 100vh;
       width: 100vw;
@@ -22,8 +27,6 @@
       position: absolute;
       bottom: 0;
       left: 50%;
-      /* transform: translate(-50%, 65%); */
-      /* transform: rotate(45deg); */
       width: 70vw;
       height: 70vw;
       background: url('assets/frame1.webp') no-repeat center center;
@@ -46,7 +49,6 @@
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 65%) rotate(0deg);
-            /* transform: rotate(45deg); */
             width: 100vw ;
             height: 100vw ;
             background: url('assets/frame1.webp') no-repeat center center;
@@ -57,7 +59,6 @@
             animation-iteration-count: infinite;
       }
       .logo {
-            display: block;
             color: white;
             font-family: 'Pixelify Sans';
             font-style: normal;
@@ -67,24 +68,33 @@
 
 /* LOGO */    
 .logo {
-	display: block;
       color: #CEB7FF;
       font-family: 'Pixelify Sans';
       font-style: normal;
       font-size: 2.5rem;
 }
 
-@media (max-width: 375px) {
+.logo--size{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+}
+
+@media (max-width: 425px) {
       
       .logo {
-            font-size: 2rem;
+            font-size: 1.5rem;
       }
     }
 
 .logo__main{
       display: flex;
       justify-content:flex-start;
+      align-items: center;
   }
+
+/* ANIMATIONS */ 
 
 @keyframes rotateAnimation {
       0% {
@@ -103,3 +113,33 @@
             transform: translate(-50%, 65%) rotate(360deg);
       }
 }
+
+.h1{
+      color: #CEB7FF;
+      font-family: "Ubuntu Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      color: whitesmoke;
+}
+
+.h1--size{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+}
+
+@media (max-width: 425px) {
+      
+      .h1 {
+            font-size: 2.5rem;
+      }
+    }
+
+.h1__main{
+      display: flex;
+      justify-content:flex-start;
+      align-items: center;
+  }
